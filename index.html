@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>Maze Generator</title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/controls.css">
+</head>
+
+<body>
+
+	<div id="con" class="flex-container">
+		<div class="flex-item flex-item1">
+			<div class="content">
+				<h1>Maze Generator</h1>
+			</div>
+			<canvas id="maze" width="600" height="600">
+				Your browser does not support the canvas element.
+			</canvas>
+
+			<div class="buttons">
+				<button onclick="create_maze();">Create Maze</button>
+				<button onclick="create_maze_animated();">Create Maze animated</button>
+				<button onclick="print_maze();">Print Maze</button>
+				<label for="cellwidth">Size:</label>
+				<input id="cellwidth" type="number" name="" value="20" min="10" max="50" onkeydown="return false" style="width:3rem;">
+			</div>
+		</div>
+
+		<div class="flex-item flex-item2">
+			<h1>Controls</h1>
+			<div class="flex-control">
+				<table class="controls-table">
+					<tr>
+						<td class="td-label">Style:</td>
+						<td><input id="lightrd" class="input-radio" type="radio" name="light" value="" checked><label for="light">Light</label></td>
+						<td><input id="darkrd" class="input-radio" type="radio" name="dark" value=""><label for="dark">Dark</label></td>
+					</tr>
+				</table>
+				<hr class="controls-hr">
+				<table class="controls-table">
+					<tr>
+						<td class="td-label">Line-width:</td>
+						<td><input id="slider-linew" class="slider-lw" type="range" min="1" max="5" value="1"> <span id="lw-lbl" class="sl-lbl">1px</span> </td>
+					</tr>
+				</table>
+				<hr class="controls-hr">
+				<table class="controls-table">
+					<tr>
+						<td class="td-label">Glow-Effect:</td>
+						<td class="glow-colorpicker"><input id="clrpicker" type="color" name="" value="#e66465">
+							<button id="reset-btn" class="fa-btn" type="button" name="button"><i class="fas fa-times"></i></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-label">Glow-Size:</td>
+						<td><input id="slider-glows" class="slider-lw" type="range" min="1" max="15" value="5"> <span id="gl-lbl" class="sl-lbl">5px</span> </td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/controls.js"></script>
+
+	<script>
+		window.onload = (event) => {
+			createMaze(parseInt($('#cellwidth').val()));
+		};
+
+		var create_maze = () => {
+			createMaze(parseInt($('#cellwidth').val()));
+		}
+
+		var create_maze_animated = () => {
+			createMazeAnimated(parseInt($('#cellwidth').val()));
+		}
+
+		var print_maze = () => {
+			printMaze('maze');
+		}
+	</script>
+</body>
+
+</html>

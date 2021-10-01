@@ -1,0 +1,87 @@
+p, label {
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+  margin: .4rem;
+}
+
+.sl-lbl {
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  left: -5px;
+  font-size: 0.75rem;
+  font-family: fantasy;
+  text-align: left;
+  font-style: oblique;
+  color: rgb(71, 71, 71);
+}
+
+.controls-table {
+  margin-top: 5px;
+}
+
+.controls-hr {
+  margin: 10px auto;
+  background-color: #d6d6d6;
+  height: 1px;
+  width: 80%;
+  border-style: none;
+}
+
+.td-label {
+  font-size: 0.75rem;
+  font-family: fantasy;
+  width: 5rem;
+  margin: 5px 0 0 10px;
+  display: flex;
+  font-style: oblique;
+  text-decoration: underline;
+  color: rgb(71, 71, 71);
+}
+
+.input-radio, label {
+  font-size: 0.8rem;
+}
+
+.slider-lw {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider-lw::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider-lw::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.glow-colorpicker {
+  position: relative;
+  bottom: 10px;
+}
+
+.fa-btn {
+  margin: 3px;
+  font-size: 0.7rem;
+  color: rgb(71, 71, 71);
+}

@@ -1,0 +1,63 @@
+body {
+  /* https://www.transparenttextures.com/ */
+  background-color: #fdfff2;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+}
+
+h1 {
+  text-align: center;
+  display: table;
+  margin: auto;
+}
+
+button {
+  margin: 10px;
+}
+
+#maze {
+  background-color: #FFF;
+  height: 32rem;
+  width: 32rem;
+  border: 1px solid #666666;
+  box-shadow: 3px 3px #999999;
+  display: table;
+  margin: 1rem auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.flex-item {
+  margin: .75rem;
+}
+
+.flex-item1 {
+  min-height: 36rem;
+  width: 36rem;
+}
+
+.flex-item2 {
+  min-height: 36rem;
+  width: 16rem;
+  margin-top: 1rem;
+}
+
+.flex-control {
+  background-color: #FAFAFA;
+  min-height: 10rem;
+  width: 100%;
+  border: 1px solid #666666;
+  box-shadow: 3px 3px #999999;
+  display: table;
+  margin: 1rem auto;
+}
+
+.buttons {
+  display: table;
+  margin: 10px auto;
+}
